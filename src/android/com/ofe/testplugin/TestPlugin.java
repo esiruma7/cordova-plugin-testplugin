@@ -1,19 +1,28 @@
-
 package com.ofe.testplugin;
 
-import org.apache.cordova.*;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+
 import org.json.JSONArray;
 import org.json.JSONException;
-package com.ofe.testplugin;
 
 public class TestPlugin extends CordovaPlugin {
+
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if ("echo".equals(action)) {
             String message = args.getString(0);
-            callbackContext.success("Echo: " + message);
+            this.echo(message, callbackContext);
             return true;
         }
         return false;
+    }
+
+    private void echo(String message, CallbackContext callbackContext) {
+        if (message != null && message.length() > 0) {
+            callbackContext.success("Echo: " + message);
+        } else {
+            callbackContext.error("Expected one non-empty string argument.");
+        }
     }
 }
