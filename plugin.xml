@@ -12,13 +12,13 @@
     </js-module>
 
 	<platform name="android">
-		<source-file src="src/android/com/ofe/testplugin/TestPlugin.java"
-					 target-dir="src/com/ofe/testplugin"/>
-		<config-file target="res/xml/config.xml" parent="/*">
-			<feature name="TestPlugin">
-				<param name="android-package" value="com.ofe.testplugin.TestPlugin"/>
-			</feature>
-		</config-file>
+	  <source-file src="src/android/com/ofe/testplugin/TestPlugin.java"
+				   target-dir="src/com/ofe/testplugin"/>
+	  <config-file target="res/xml/config.xml" parent="/*">
+		<feature name="TestPlugin">
+		  <param name="android-package" value="com.ofe.testplugin.TestPlugin"/>
+		</feature>
+	  </config-file>
 	</platform>
 
 	<platform name="ios">
