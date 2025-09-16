@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-testplugin",
+  "version": "1.0.0",
+  "description": "A simple test plugin for OutSystems Cordova integration",
+  "cordova": {
+    "id": "com.ofe.testplugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "test",
+    "ecosystem:cordova"
+  ],
+  "author": "OFE",
+  "license": "MIT"
+}

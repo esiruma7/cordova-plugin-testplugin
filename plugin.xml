@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.ofe.testplugin" version="1.0.0"
+        xmlns="http://apache.org/cordova/ns/plugins"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>Test Plugin</name>
+    <description>A simple test plugin for OutSystems Cordova integration</description>
+    <license>MIT</license>
+
+    <js-module src="www/test.js" name="Test">
+        <clobbers target="Test"/>
+    </js-module>
+
+    <platform name="android">
+        <source-file src="src/android/com/ofe/testplugin/TestPlugin.java"
+                     target-dir="com/ofe/testplugin"/>
+    </platform>
+
+    <platform name="ios">
+        <source-file src="src/ios/TestPlugin.swift"/>
+    </platform>
+</plugin>
