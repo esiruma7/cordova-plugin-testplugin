@@ -4,6 +4,7 @@ package com.ofe.testplugin;
 import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
+package com.ofe.testplugin;
 
 public class TestPlugin extends CordovaPlugin {
     @Override
