@@ -11,14 +11,25 @@
         <clobbers target="Test"/>
     </js-module>
 
-    <platform name="android">
-        <source-file src="src/android/com/ofe/testplugin/TestPlugin.java"
-                     target-dir="com/ofe/testplugin"/>
-    </platform>
+	<platform name="android">
+		<source-file src="src/android/com/ofe/testplugin/TestPlugin.java"
+					 target-dir="src/com/ofe/testplugin"/>
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="TestPlugin">
+				<param name="android-package" value="com.ofe.testplugin.TestPlugin"/>
+			</feature>
+		</config-file>
+	</platform>
 
-    <platform name="ios">
-        <source-file src="src/ios/TestPlugin.swift"/>
-    </platform>
+	<platform name="ios">
+		<source-file src="src/ios/TestPlugin.swift"/>
+		<config-file target="config.xml" parent="/*">
+			<feature name="TestPlugin">
+				<param name="ios-package" value="TestPlugin"/>
+			</feature>
+		</config-file>
+	</platform>
+
 	<feature name="TestPlugin">
 	  <param name="android-package" value="com.ofe.testplugin.TestPlugin"/>
 	  <param name="ios-package" value="TestPlugin"/>
